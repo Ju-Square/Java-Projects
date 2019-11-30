@@ -1,4 +1,4 @@
-public class Exercise {
+public class Exercise { //Taks 1
 
     private String exercisesName;
     private String description;
@@ -6,12 +6,14 @@ public class Exercise {
     private String position;
 
     public Exercise(String exercisesName, String description, int durationSec, String position){
+        //Task 2
         this.exercisesName = exercisesName;
         this.description = description;
         this.durationSec = durationSec;
         this.position = position;
 
     }
+    //Task 3
     public String print(){
         String printOut = "";
         printOut+=getExercisesName()+ "       DURATION: " +getDurationSec()+ " seconds.\n";

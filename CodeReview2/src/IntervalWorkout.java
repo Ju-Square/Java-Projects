@@ -1,52 +1,31 @@
 public class IntervalWorkout {
+    public static void main(String[] args) {
+        String[] severalExercises = new String[]{"Push-ups", "Squats", "Planks"};
+        String[] numbOfReps = new String[]{"Round 1", "Round 2", "Round 3", "Round 4"};
+        int breaktime = 30;
 
-    private String severalExercises;
-    private int breaktime;
+        System.out.println("*****************************");
+        System.out.println("Interval Workout STARTS !!!!");
+        System.out.println("*****************************");
 
-    public IntervalWorkout(String severalExercises, int breaktime){
-        this.severalExercises = severalExercises;
-        this.breaktime = breaktime;
-    }
-    public String print(){
-        String printInterval = "";
-        printInterval+="********************************\n";
-        printInterval+="Interval Workout STARTS !!!!\n";
-        printInterval+="********************************\n";
-        printInterval+="================================\n";
-        printInterval+="ROUND 1";
-        printInterval+=getSeveralExercises();
-        printInterval+="================================\n";
-        printInterval+="DO THE BREAK ("+getBreaktime()+")\n";
-        printInterval+="================================\n";
-        printInterval+="ROUND 2";
-        printInterval+=getSeveralExercises();
-        printInterval+="================================\n";
-        printInterval+="DO THE BREAK ("+getBreaktime()+")\n";
-        printInterval+="================================\n";
-        printInterval+="ROUND 3";
-        printInterval+=getSeveralExercises();
-        printInterval+="================================\n";
-        printInterval+="DO THE BREAK ("+getBreaktime()+")\n";
-        printInterval+="================================\n";
-        printInterval+="ROUND 4";
-        printInterval+=getSeveralExercises();
-        printInterval+="================================\n";
-        printInterval+="DO THE BREAK ("+getBreaktime()+")\n";
-        printInterval+="================================\n";
-        printInterval+="\n";
-        printInterval+="\n";
-        printInterval+="\n";
-        printInterval+="********************************\n";
-        printInterval+="CONGRATS - YOU ARE DONE !!!\n";
-        printInterval+="********************************";
+        for (int i = 0; i < numbOfReps.length; i++) {
+            System.out.println("=============================");
+            System.out.println(numbOfReps[i]);
+            for (int j = 0; j < severalExercises.length; j++) {
+                System.out.println(severalExercises[j]);
+            }
+            if (i != 3) {
+                System.out.println("=============================");
+                System.out.println("DO THE BREAK (" + breaktime + " SECONDS)");
+            }
+        }
 
-        return printInterval;
-    }
+        System.out.println("\n");
+        System.out.println("*****************************");
+        System.out.println("CONGRATS - YOU ARE DONE !!!");
+        System.out.println("*****************************");
 
-    public String getSeveralExercises(){
-        return severalExercises;
-    }
-    public int getBreaktime(){
-        return breaktime;
+
     }
 }
+
